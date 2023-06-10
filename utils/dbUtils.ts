@@ -1,7 +1,7 @@
 import { MongoClient, Sort } from "mongodb";
 
 export async function connectDatabase() {
-  const client = await MongoClient.connect("mongodb://root:******@120.53.241.206:27017");
+  const client = await MongoClient.connect("mongodb://root:******@your ip:27017");
 
   return client;
 }

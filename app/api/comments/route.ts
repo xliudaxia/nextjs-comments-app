@@ -5,6 +5,7 @@ import {
   } from "@/utils/dbUtils";
   import { NextRequest, NextResponse } from "next/server";
   
+  /* 新增Comment方法 */
   export async function POST(request: NextRequest) {
     let client;
   
@@ -64,6 +65,7 @@ import {
     }
   }
   
+  /* 获取Comments方法 */
   export async function GET() {
     let client;
   

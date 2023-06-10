@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-
 import CommentList from "./CommentList";
 import NewComment from "./NewComment";
+import Image from "next/image";
 
 import styles from "./Comments.module.css";
 
@@ -44,13 +44,25 @@ function Comments() {
         console.log(data);
       });
   }
- 
 
   return (
-    <section className={styles.comments}>
-      <NewComment onAddComment={addCommentHandler} />
-      <CommentList isLoading={isLoading} items={comments} />
-    </section>
+    <>
+      <div className="header">
+        <Image
+          src="/next.svg"
+          alt="Next.js Logo"
+          className="logo"
+          width={100}
+          height={24}
+          priority
+        />
+        <div>Mini Comments</div>
+      </div>
+      <section className={styles.comments}>
+        <NewComment onAddComment={addCommentHandler} />
+        <CommentList isLoading={isLoading} items={comments} />
+      </section>
+    </>
   );
 }
 
